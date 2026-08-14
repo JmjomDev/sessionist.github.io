@@ -1,1 +1,1 @@
-# sessionist.github.io
+# Sessionist Pre-alpha
