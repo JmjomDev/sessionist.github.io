@@ -41,37 +41,6 @@
 
 ---
 
-## 🚀 Quick Start & Development
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/TTracker.git
-cd TTracker
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Run Development Server
-```bash
-npm run dev
-```
-Open `http://localhost:5173` in your browser.
-
-### 4. Build for Production & Android APK
-```bash
-# Build Web Bundle & Sync to Capacitor Android
-npm run cap:build
-```
-Then open Android Studio:
-```bash
-npx cap open android
-```
-
----
-
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
