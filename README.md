@@ -26,7 +26,7 @@
 
 ## 📱 Live Web App & Downloads
 
-- 🌐 **Live Web Version**: [https://JmjomDev.github.io/sessionist.github.io/](https://JmjomDev.github.io/sessionist.github.io/) *(Online 24/7)*
+- 🌐 **Live Web Version**: [https://JmjomDev.github.io/sessionist.github.io/](https://JmjomDev.github.io/sessionist.github.io/)
 - 📦 **Download Android APK**: [Release v1.0.1 APK](../../releases/latest)
 
 ---
