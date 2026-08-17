@@ -1,11 +1,11 @@
-# ⚡ Sessionist — High-Yield AI Study & Spaced Repetition Tracker
+# ⚡ **Sessionist** — SR Tracker
 
 <p align="center">
   <img src="public/logo_final.png" alt="Sessionist Logo" width="120" />
 </p>
 
 <p align="center">
-  <b>Master your medical & academic lectures with AI flashcard generation, spaced repetition, and seamless cloud synchronization.</b>
+  <b>Master your medical & academic lectures with spaced repetition and active recall.</b>
 </p>
 
 <p align="center">
@@ -21,12 +21,10 @@
 ## 🌟 Key Features
 
 - **🧠 NotebookLM-Grade AI Flashcard Generator**: Automatically extracts high-yield testable concepts, medical formulas, and definitions from PDF slides and text notes using Google Gemini 2.0 & 1.5.
-- **🛡️ Smart Offline Fallback Engine**: If AI rate limits are reached or offline, an intelligent heuristic engine extracts study flashcards with 0 delay.
 - **📅 Spaced Repetition Review Engine**: Daily review system with automated due-today counters, past mistake tracking, and retention statistics.
 - **📚 Lecture Library & Log**: Complete course organization by Subject, Module, and Lecture Status.
-- **☁️ Firebase Real-time Cloud Sync**: Instant cross-device synchronization between web browser and native Android app.
+- **☁️ Real-time Cloud Sync**: Instant cross-device synchronization between web browser and native Android app.
 - **🎨 Modern Dynamic Theme Engine**: Smooth glassmorphism, accent color customization, Light Mode, Dark Mode, and OLED Pitch-Black theme.
-- **📱 Native Android Mobile App**: Built with Capacitor for 60FPS fluid touch performance.
 
 ---
 
