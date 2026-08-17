@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>Master your medical & academic lectures with spaced repetition and active recall.</b>
+  <img src="logo_final.png" alt="Sessionist Logo" width="180" style="border-radius: 24px;" />
 </p>
 
 <p align="center">
