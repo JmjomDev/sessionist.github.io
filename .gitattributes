@@ -1,1 +1,4 @@
-* text=auto
+# Force GitHub Linguist to ignore HTML and display TypeScript
+*.html linguist-detectable=false
+android/* linguist-vendored
+dist/* linguist-vendored
