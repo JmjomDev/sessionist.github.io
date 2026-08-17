@@ -1,0 +1,432 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Quadrillion';
+  src: url('C:/Users/gamal/Downloads/quadrillion/Quadrillion Sb.otf?url') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y pinch-zoom;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y pinch-zoom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove default browser focus outlines across all interactive elements */
+*, *:focus, *:focus-visible, button:focus, input:focus, textarea:focus, div:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* GPU Hardware Acceleration for buttery-smooth 60 FPS transitions */
+.gpu-accelerate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Mobile high-performance blur fallback (< 640px) to boost phone FPS */
+@media (max-width: 639px) {
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+@layer utilities {
+  /* Globally hide all scrollbar tracks across all elements in all browsers */
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Utility to hide scrollbars when desired */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Vertical Line Slider Thumb */
+  .slider-thumb-line::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 18px;
+    border-radius: 2px;
+    background: #ffffff;
+    border: 1px solid #0f172a;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+  }
+
+  .slider-thumb-line::-moz-range-thumb {
+    width: 5px;
+    height: 18px;
+    border-radius: 2px;
+    background: #ffffff;
+    border: 1px solid #0f172a;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+  }
+
+  /* Rest Day Animated Diagonal Stripes Patterns */
+  .bg-rest-stripes-dark {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(245, 158, 11, 0.18),
+      rgba(245, 158, 11, 0.18) 10px,
+      rgba(24, 24, 27, 0.85) 10px,
+      rgba(24, 24, 27, 0.85) 20px
+    );
+  }
+
+  .bg-rest-stripes-light {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(245, 158, 11, 0.25),
+      rgba(245, 158, 11, 0.25) 10px,
+      rgba(254, 243, 199, 0.7) 10px,
+      rgba(254, 243, 199, 0.7) 20px
+    );
+  }
+
+  @keyframes moveStripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 28.28px 0;
+    }
+  }
+
+  .animate-stripes {
+    background-size: 28.28px 28.28px;
+    animation: moveStripes 3s linear infinite;
+  }
+
+  /* Custom Animations */
+  @keyframes floatNeonOrb1 {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(140px, 160px) scale(1.18);
+    }
+    66% {
+      transform: translate(-100px, 220px) scale(0.88);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  @keyframes floatNeonOrb2 {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(-160px, -200px) scale(1.15);
+    }
+    66% {
+      transform: translate(80px, -140px) scale(0.92);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-neon-orb-1 {
+    animation: floatNeonOrb1 16s ease-in-out infinite;
+  }
+
+  .animate-neon-orb-2 {
+    animation: floatNeonOrb2 20s ease-in-out infinite;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOutShrink {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  .animate-fade-out {
+    animation: fadeOutShrink 0.2s ease-in forwards;
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Enhanced Seamless Directional Page Slide Animations */
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(55px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-55px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.25s ease-out forwards;
+  }
+
+  .animate-fade-out {
+    animation: fadeOutShrink 0.28s ease-in forwards;
+  }
+
+  .animate-fade-slide-up {
+    animation: fadeSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-pop-in {
+    animation: popIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes popOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  .animate-pop-out {
+    animation: popOut 0.18s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+
+  @keyframes fadeOutModal {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-modal-backdrop-out {
+    animation: fadeOutModal 0.18s ease-in forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(45px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-45px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up-page {
+    animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-slide-down-page {
+    animation: slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Mobile phone performance override: prevent horizontal 55px layout stretch and lag */
+  @media (max-width: 640px) {
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw;
+      width: 100%;
+      position: relative;
+    }
+    .animate-slide-left,
+    .animate-slide-right {
+      animation: fadeIn 0.18s ease-out forwards !important;
+    }
+  }
+
+  /* Opal App Intro Sequence Custom Keyframes & Utilities */
+  @keyframes opalLogoPulse {
+    0%, 100% {
+      transform: scale(0.95);
+      opacity: 0.82;
+      filter: drop-shadow(0 0 16px rgba(99, 102, 241, 0.3));
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+      filter: drop-shadow(0 0 32px rgba(129, 140, 248, 0.65));
+    }
+  }
+
+  .animate-opal-logo-pulse {
+    animation: opalLogoPulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes opalBlurFadeOut {
+    0% {
+      opacity: 1;
+      filter: blur(0px);
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(14px);
+      transform: scale(0.96);
+    }
+  }
+
+  .animate-opal-blur-fade-out {
+    animation: opalBlurFadeOut 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes opalOverlayFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-opal-overlay-fade-out {
+    animation: opalOverlayFadeOut 0.75s ease-out forwards;
+  }
+
+  @keyframes opalAppRevealFromEdges {
+    0% {
+      opacity: 0;
+      transform: scale(1.035);
+      clip-path: inset(14% 0% 14% 0% round 32px);
+      filter: blur(10px);
+    }
+    60% {
+      opacity: 0.85;
+      transform: scale(1.008);
+      clip-path: inset(2% 0% 2% 0% round 12px);
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      clip-path: inset(0% 0% 0% 0% round 0px);
+      filter: blur(0px);
+    }
+  }
+
+  .animate-opal-app-reveal {
+    animation: opalAppRevealFromEdges 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+
