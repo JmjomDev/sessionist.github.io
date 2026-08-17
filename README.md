@@ -1,7 +1,7 @@
 # ⚡ **Sessionist** — SR Tracker
 
 <p align="center">
-  <img src="public/logo_final.png" alt="Sessionist Logo" width="120" />
+  <img src="logo_final.png" alt="Sessionist Logo" width="120" />
 </p>
 
 <p align="center">
