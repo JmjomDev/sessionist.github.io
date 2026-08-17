@@ -1,0 +1,4 @@
+dist/** linguist-vendored
+android/** linguist-vendored
+public/** linguist-documentation
+*.html linguist-detectable=false
