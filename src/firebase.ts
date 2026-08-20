@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, enableIndexedDbPersistence } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDs6ZW4u6SevsizLuwyJh2_Lwd-fipCAM8",
+  apiKey: "notconfigured",
   authDomain: "sessionist-tracker.firebaseapp.com",
   projectId: "sessionist-tracker",
   storageBucket: "sessionist-tracker.firebasestorage.app",
